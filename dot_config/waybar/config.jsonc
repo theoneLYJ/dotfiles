@@ -32,6 +32,9 @@
 	"modules-right": [
 		"custom/padd",
 		"custom/l_end",
+		"custom/wall",
+		"custom/r_end",
+		"custom/l_end",
 		"backlight",
 		"pulseaudio",
 		"custom/pacman",
@@ -213,6 +216,11 @@
 		/* "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system */
 		"on-click": "kitty yay && kitty flatpak update && kitty gem update --system && kitty gem update && kitty rustup update && kitty  sudo npm update -g npm",
 		"signal": 8
+	},
+
+	"custom/wall": {
+		"format": "",
+		"on-click": "~/.config/hypr/scripts/swwwallselect.sh",
 	},
 
 // modules for padding //

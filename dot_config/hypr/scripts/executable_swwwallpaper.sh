@@ -11,8 +11,7 @@ Wall_Update()
     local x_wall="$1"
     local x_update="${x_wall/$HOME/"~"}"
     cacheImg=$(basename "$x_wall")
-		echo "${cacheDir}"
-		echo "${cacheImg}"
+		$ScrDir/swwwallbash.sh "$x_wall" &
 
     if [ ! -f "${cacheDir}/${cacheImg}" ] ; then
         convert -strip "$x_wall" -thumbnail 500x500^ -gravity center -extent 500x500 "${cacheDir}${cacheImg}" &

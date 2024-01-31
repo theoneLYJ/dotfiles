@@ -152,21 +152,6 @@ return {
 			handler_opts = { border = mo.styles.border },
 		},
 	},
-
-	{
-		"chrisgrieser/nvim-origami",
-		event = "BufReadPost", -- later or on keypress would prevent saving folds
-		opts = true, -- needed even when using default config
-		config = function()
-			-- default values
-			require("origami").setup {
-				keepFoldsAcrossSessions = true,
-				pauseFoldsOnSearch = true,
-				setupFoldKeymaps = true,
-			}
-		end
-	},
-
 	{
 		"CRAG666/code_runner.nvim",
 		event = "VeryLazy",
